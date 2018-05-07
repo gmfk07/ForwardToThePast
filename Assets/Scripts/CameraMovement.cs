@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour {
     public float height;
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         var playerPos = player.transform.position;
         var camPos = gameObject.transform.position;
         if (playerPos.x > camPos.x + width/2)
