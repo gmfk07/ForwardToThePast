@@ -7,6 +7,7 @@ public class SimpleEnemyMovement : MonoBehaviour {
     public float speed;
     public GameObject cam;
     private Vector3 direction;
+    private PlayerStats playerstats;
 
     private void Start()
     {
@@ -19,10 +20,20 @@ public class SimpleEnemyMovement : MonoBehaviour {
             Move();
 	}
 
-    private void OnCollisionEnter2D(Collision2D collider)
+    private void OnCollisionStay2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Wall")
             direction = -direction;
+        if (collider.gameObject.tag == "Player")
+        {
+            playerstats = collider.gameObject.GetComponent<PlayerStats>();
+            if (!playerstats.invincible)
+            {
+                playerstats.health--;
+                playerstats.invincible = true;
+                playerstats.StartTimer();
+            }
+        }
     }
 
     void Move()
