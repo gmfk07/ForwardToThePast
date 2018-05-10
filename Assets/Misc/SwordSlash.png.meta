@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: 41241be832ff33e47a5ce5057e64531c
+timeCreated: 1525970683
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SwordSlash_0
+    21300002: SwordSlash_1
+    21300004: SwordSlash_2
+    21300006: SwordSlash_3
+    21300008: SwordSlash_4
+    21300010: SwordSlash_5
+    21300012: SwordSlash_6
+    21300014: SwordSlash_7
+    21300016: SwordSlash_8
+    21300018: SwordSlash_9
+    21300020: SwordSlash_10
+    21300022: SwordSlash_11
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SwordSlash_0
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 614
+        width: 44
+        height: 44
+      alignment: 9
+      pivot: {x: 0.51345026, y: 0.042687155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 627
+        width: 55
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07093201}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 631
+        width: 70
+        height: 43
+      alignment: 9
+      pivot: {x: 0.52977645, y: -0.008969329}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 626
+        width: 88
+        height: 41
+      alignment: 9
+      pivot: {x: 0.4881564, y: 0.017040718}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 380
+        width: 117
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_5
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 342
+        width: 86
+        height: 119
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_6
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 305
+        width: 74
+        height: 134
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_7
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 303
+        width: 70
+        height: 125
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 102
+        width: 63
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 103
+        width: 65
+        height: 73
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_10
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 104
+        width: 66
+        height: 53
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordSlash_11
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 106
+        width: 38
+        height: 23
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -356, y: -121}
+      - {x: -373, y: -121}
+      - {x: -373, y: -224}
+      - {x: -355, y: -234}
+      - {x: -336, y: -243}
+      - {x: -323, y: -243}
+      - {x: -310, y: -233}
+      - {x: -306, y: -222}
+      - {x: -306, y: -166}
+    - - {x: -175, y: -165}
+      - {x: -175, y: -196}
+      - {x: -159, y: -227}
+      - {x: -124, y: -242}
+      - {x: -117, y: -242}
+      - {x: -106, y: -232}
+      - {x: -106, y: -197}
+      - {x: -158, y: -165}
+    - - {x: 41, y: -184}
+      - {x: 31, y: -184}
+      - {x: 31, y: -201}
+      - {x: 49, y: -237}
+      - {x: 69, y: -241}
+      - {x: 95, y: -241}
+      - {x: 101, y: -236}
+      - {x: 101, y: -220}
+      - {x: 90, y: -199}
+    - - {x: 279, y: -212}
+      - {x: 261, y: -216}
+      - {x: 257, y: -219}
+      - {x: 257, y: -227}
+      - {x: 278, y: -239}
+      - {x: 297, y: -239}
+      - {x: 299, y: -237}
+      - {x: 299, y: -224}
+      - {x: 292, y: -212}
+    - - {x: 227, y: 87}
+      - {x: 215, y: 68}
+      - {x: 215, y: -8}
+      - {x: 256, y: -42}
+      - {x: 264, y: -42}
+      - {x: 280, y: -35}
+      - {x: 289, y: -9}
+      - {x: 289, y: 38}
+      - {x: 247, y: 87}
+    - - {x: 15, y: 4}
+      - {x: 21, y: -26}
+      - {x: 42, y: -40}
+      - {x: 93, y: -40}
+      - {x: 93, y: 82}
+      - {x: 92, y: 98}
+      - {x: 41, y: 98}
+      - {x: 15, y: 68}
+    - - {x: -134, y: 120}
+      - {x: -170, y: 111}
+      - {x: -192, y: 92}
+      - {x: -192, y: -3}
+      - {x: -158, y: -3}
+      - {x: -121, y: 33}
+      - {x: -102, y: 94}
+      - {x: -102, y: 120}
+    - - {x: -354, y: 126}
+      - {x: -392, y: 76}
+      - {x: -392, y: 44}
+      - {x: -381, y: 37}
+      - {x: -370, y: 37}
+      - {x: -319, y: 53}
+      - {x: -271, y: 96}
+      - {x: -271, y: 122}
+      - {x: -282, y: 126}
+    - - {x: -242, y: 269}
+      - {x: -229, y: 269}
+      - {x: -229, y: 299}
+      - {x: -235, y: 313}
+      - {x: -249, y: 317}
+      - {x: -277, y: 317}
+      - {x: -277, y: 275}
+    - - {x: -85, y: 326}
+      - {x: -95, y: 320}
+      - {x: -95, y: 308}
+      - {x: -88, y: 282}
+      - {x: -36, y: 282}
+      - {x: -36, y: 298}
+      - {x: -61, y: 326}
+    - - {x: 244, y: 327}
+      - {x: 240, y: 319}
+      - {x: 240, y: 285}
+      - {x: 268, y: 282}
+      - {x: 288, y: 282}
+      - {x: 332, y: 296}
+      - {x: 332, y: 325}
+      - {x: 319, y: 327}
+    - - {x: 91, y: 333}
+      - {x: 84, y: 320}
+      - {x: 84, y: 308}
+      - {x: 97, y: 286}
+      - {x: 158, y: 286}
+      - {x: 158, y: 314}
+      - {x: 122, y: 333}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
