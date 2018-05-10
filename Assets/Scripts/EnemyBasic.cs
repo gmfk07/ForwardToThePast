@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EnemyBasic : MonoBehaviour {
 
-    public int health;
-    private PlayerStats playerstats;
+    public int health = 40;
 
-    public void Damage()
+    public void TakeDamage()
     {
+        Debug.Log("Enemy Lost Health. HP: " + health);
+        //TODO: Death when enemy reaches 0 health
         health--;
     }
 
@@ -16,13 +17,8 @@ public class EnemyBasic : MonoBehaviour {
     {
         if (collider.gameObject.tag == "Player")
         {
-            playerstats = collider.gameObject.GetComponent<PlayerStats>();
-            if (!playerstats.invincible)
-            {
-                playerstats.health--;
-                playerstats.invincible = true;
-                playerstats.StartTimer();
-            }
+            PlayerStats playerstats = collider.gameObject.GetComponent<PlayerStats>();
+            playerstats.HurtPlayer();
         }
     }
 }

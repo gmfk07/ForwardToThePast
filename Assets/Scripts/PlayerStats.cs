@@ -30,6 +30,16 @@ public class PlayerStats : MonoBehaviour {
         }
     }
 
+    public void HurtPlayer(int damage = 1) {
+        if (!invincible)
+        {
+            health-= 1;
+            //TODO: Player dies when health reaches 0
+            invincible = true;
+            StartTimer();
+        }
+    }
+
     IEnumerator Flash()
     {
         while (invincible)
