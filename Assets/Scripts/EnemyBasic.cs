@@ -9,8 +9,9 @@ public class EnemyBasic : MonoBehaviour {
     public void TakeDamage()
     {
         Debug.Log("Enemy Lost Health. HP: " + health);
-        //TODO: Death when enemy reaches 0 health
         health--;
+        if (health == 0)
+            Destroy(gameObject);
     }
 
     void OnCollisionStay2D(Collision2D collider)
