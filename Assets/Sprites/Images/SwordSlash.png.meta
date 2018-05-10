@@ -16,6 +16,7 @@ TextureImporter:
     21300018: SwordSlash_9
     21300020: SwordSlash_10
     21300022: SwordSlash_11
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -69,28 +70,34 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: WebGL
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -145,7 +152,7 @@ TextureImporter:
         width: 88
         height: 41
       alignment: 9
-      pivot: {x: 0.4881564, y: 0.017040718}
+      pivot: {x: 0.81666285, y: 0.11105123}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,8 +165,8 @@ TextureImporter:
         y: 380
         width: 117
         height: 85
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.8870945, y: 0.43079332}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,8 +193,8 @@ TextureImporter:
         y: 305
         width: 74
         height: 134
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.88280344, y: 0.70854414}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,8 +207,8 @@ TextureImporter:
         y: 303
         width: 70
         height: 125
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7935111, y: 0.68501467}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,8 +221,8 @@ TextureImporter:
         y: 102
         width: 63
         height: 118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7294328, y: 0.77765244}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,8 +235,8 @@ TextureImporter:
         y: 103
         width: 65
         height: 73
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 9
+      pivot: {x: 0.7816735, y: 0.8943977}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
