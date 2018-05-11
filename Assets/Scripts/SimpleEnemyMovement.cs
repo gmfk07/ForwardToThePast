@@ -5,11 +5,12 @@ using UnityEngine;
 public class SimpleEnemyMovement : MonoBehaviour {
 
     public float speed;
-    public GameObject cam;
+    private GameObject cam;
     private Vector3 direction;
 
     private void Start()
     {
+        cam = GameObject.Find("Main Camera");
         direction = Vector3.up;
     }
 

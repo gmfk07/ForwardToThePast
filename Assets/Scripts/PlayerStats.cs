@@ -34,7 +34,7 @@ public class PlayerStats : MonoBehaviour {
         if (!invincible)
         {
             health-= 1;
-            //TODO: Player dies when health reaches 0
+            //TODO: Die when health reaches 0
             invincible = true;
             StartTimer();
         }
