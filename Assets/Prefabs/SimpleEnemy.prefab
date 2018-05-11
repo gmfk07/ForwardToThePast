@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50874762066390362}
   - component: {fileID: 114632716895197728}
   - component: {fileID: 114719289670260400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SimpleEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  cam: {fileID: 0}
 --- !u!114 &114719289670260400
 MonoBehaviour:
   m_ObjectHideFlags: 1

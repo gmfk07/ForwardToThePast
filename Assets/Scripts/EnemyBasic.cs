@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyBasic : MonoBehaviour {
 
     public int health = 40;
+    public bool hurtOnContact = true;
 
     public void TakeDamage()
     {
-        Debug.Log("Enemy Lost Health. HP: " + health);
         health--;
         if (health == 0)
             Destroy(gameObject);
@@ -16,7 +16,7 @@ public class EnemyBasic : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player" && hurtOnContact)
         {
             PlayerStats playerstats = collider.gameObject.GetComponent<PlayerStats>();
             playerstats.HurtPlayer();
