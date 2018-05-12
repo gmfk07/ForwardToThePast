@@ -286,6 +286,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyBasic.cs" />
+    <Compile Include="Assets\Scripts\GopherEnemy.cs" />
     <Compile Include="Assets\Scripts\Pickup.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
