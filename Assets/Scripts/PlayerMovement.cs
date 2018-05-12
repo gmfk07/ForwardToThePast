@@ -18,16 +18,45 @@ public class PlayerMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        Transform t = GetComponent<Transform>();
+        //Movement
         float vertInput = Input.GetAxis("Vertical");
         float horInput = Input.GetAxis("Horizontal");
+        transform.position += new Vector3(horInput * speed, vertInput * speed);
+        
+        //Attack
         Direction? attackDirection = GetAttackDirection();
-
-        t.position += new Vector3(horInput * speed, vertInput * speed);
         if (canAttack && attackDirection != null)
             Attack(attackDirection);
+
+        //Talk
+        if (Input.GetButtonDown("Talk"))
+        {
+            NPC npc = FindTalkableNpc();
+            if (npc != null)
+                npc.Talk();
+        }
     }
 
+    //Attempts to find an npc that is within its talk range
+    private NPC FindTalkableNpc()
+    {
+        NPC talkable = null;
+        float closestDist = float.MaxValue;
+        NPC[] npcs = GameObject.FindObjectsOfType<NPC>();
+        foreach (NPC npc in npcs)
+        {
+            Vector2 toNpc = transform.position - npc.transform.position;
+            float dist = toNpc.magnitude;
+            if (dist < npc.interactRadius && dist < closestDist)
+            {
+                closestDist = dist;
+                talkable = npc;
+            }
+        }
+        return talkable;
+    }
+
+    //Attack Functions
     IEnumerator AttackTimer()
     {
         canAttack = false;
