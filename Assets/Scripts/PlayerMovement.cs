@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
             Attack(attackDirection);
 
         //Talk
-        if (Input.GetButtonDown("Talk"))
+        if (Input.GetButtonDown("Talk") && !DialogueManager.instance.IsInDialogue())
         {
             NPC npc = FindTalkableNpc();
             if (npc != null)
