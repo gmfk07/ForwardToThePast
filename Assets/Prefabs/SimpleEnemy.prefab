@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 212880420878756166}
   - component: {fileID: 61797352425179626}
   - component: {fileID: 50874762066390362}
-  - component: {fileID: 114632716895197728}
-  - component: {fileID: 114719289670260400}
+  - component: {fileID: 114242887036443282}
   m_Layer: 8
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -38,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088466757657626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.93, y: 0.51, z: 0}
+  m_LocalPosition: {x: -4.233, y: 3.829, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.14}
   m_EdgeRadius: 0
---- !u!114 &114632716895197728
+--- !u!114 &114242887036443282
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,26 +96,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1088466757657626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0a5a83bed26f4643b165fab0f7a368c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cda8b17c7f7098429059965fe52b9e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
---- !u!114 &114719289670260400
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1088466757657626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62a8176e5d40714cb1230082c918dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2
-  dropMoney: 1
-  coinSpeed: 0.1
-  hurtOnContact: 1
-  coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
+  dialogue:
+    name: Julian Hoyt
+    sentences:
+    - Life is good.
+    - I wish that were the case.
+  interactRadius: 0.95
 --- !u!212 &212880420878756166
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -130,7 +118,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -153,7 +140,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.093263395, g: 0.1533043, b: 0.5514706, a: 1}
+  m_Color: {r: 0.1067258, g: 0.678, b: 0.6911765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

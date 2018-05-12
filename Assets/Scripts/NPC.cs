@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour {
 
-    public string[] texts;
+    public Dialogue dialogue;
     public float interactRadius = 2f;
 
 
@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour {
     //Can be overriden for custom interaction
     public virtual void Talk() {
         Debug.Log("Talk, talk, talk.");
+        DialogueManager.instance.StartDialogue(dialogue);
     }
 
     private void OnDrawGizmosSelected()
