@@ -99,12 +99,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cda8b17c7f7098429059965fe52b9e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Julian Hoyt
-    sentences:
-    - Life is good.
-    - I wish that were the case.
-  interactRadius: 0.95
+  speed: 0.1
+--- !u!114 &114719289670260400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088466757657626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62a8176e5d40714cb1230082c918dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  dropMoney: 2
+  dropHealthChance: 0.5
+  coinMaxSpeed: 200
+  coinMinSpeed: 100
+  hurtOnContact: 1
+  coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
+  healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
+    type: 2}
 --- !u!212 &212880420878756166
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour {
 
-    public int health;
+    public int maxHealth = 3;
+    private int health = 3;
     public float height;
     public bool past;
     public bool invincible;
@@ -59,6 +60,11 @@ public class PlayerStats : MonoBehaviour {
         StartCoroutine(Flash());
     }
 
+    public void IncreaseHealth(int amt)
+    {
+        health = Mathf.Min(health + amt, maxHealth);
+    }
+
     private void OnGUI()
     {
         string text = GetTimeString();
@@ -68,7 +74,7 @@ public class PlayerStats : MonoBehaviour {
 
         //Make the HUD
         GUI.BeginGroup(new Rect(0, 0, Screen.width, height));
-        GUI.Box(new Rect(0, 0, Screen.width, height), "Health: " + health.ToString());
+        GUI.Box(new Rect(0, 0, Screen.width, height), "Health: " + health.ToString() + "/" + maxHealth.ToString());
         GUI.Label(new Rect(Screen.width/2 - 50, 20, 100, 35), "Time: " + text, centeredStyle);
         GUI.Label(new Rect(Screen.width/2 - 50, 40, 100, 35), "Money: " + money.ToString(), centeredStyle);
         GUI.EndGroup();
