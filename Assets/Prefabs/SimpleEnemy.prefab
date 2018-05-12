@@ -113,10 +113,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  dropMoney: 1
-  coinSpeed: 0.1
+  dropMoney: 2
+  dropHealthChance: 0.5
+  coinMaxSpeed: 200
+  coinMinSpeed: 100
   hurtOnContact: 1
   coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
+  healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
+    type: 2}
 --- !u!212 &212880420878756166
 SpriteRenderer:
   m_ObjectHideFlags: 1
