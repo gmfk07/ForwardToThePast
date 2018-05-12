@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour {
 
     public Text nameText;
     public Text dialogueText;
+    public Animator boxAnimator;
 
     private Queue<string> sentences;
 
@@ -29,7 +30,9 @@ public class DialogueManager : MonoBehaviour {
 	}
 
     public void StartDialogue(Dialogue dialogue) {
+        boxAnimator.SetBool("InDialogue", true);
         nameText.text = dialogue.name;
+        Time.timeScale = 0.02f;
 
         sentences.Clear();
         foreach (string sentence in dialogue.sentences) {
@@ -45,9 +48,14 @@ public class DialogueManager : MonoBehaviour {
         }
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
+        //Next
+        if (Input.GetButtonDown("Talk"))
+            DisplayNextSentence();
     }
 
     void EndDialogue() {
-        Debug.Log("Ending dialogue");
+        //Debug.Log("Ending dialogue");
+        boxAnimator.SetBool("InDialogue", false);
+        Time.timeScale = 1;
     }
 }
