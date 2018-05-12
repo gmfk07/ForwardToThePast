@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour {
     public float height;
     public bool past;
     public bool invincible;
+    public int money = 0;
     public float invincibleTimer;
     public float maxInvincibleTimer;
     private Renderer playerRenderer;
@@ -68,7 +69,8 @@ public class PlayerStats : MonoBehaviour {
         //Make the HUD
         GUI.BeginGroup(new Rect(0, 0, Screen.width, height));
         GUI.Box(new Rect(0, 0, Screen.width, height), "Health: " + health.ToString());
-        GUI.Label(new Rect(Screen.width/2-50, 20, 100, 35), "Time:" + text, centeredStyle);
+        GUI.Label(new Rect(Screen.width/2 - 50, 20, 100, 35), "Time: " + text, centeredStyle);
+        GUI.Label(new Rect(Screen.width/2 - 50, 40, 100, 35), "Money: " + money.ToString(), centeredStyle);
         GUI.EndGroup();
     }
 

@@ -12,14 +12,7 @@ public class CameraMovement : MonoBehaviour {
 	void FixedUpdate () {
         var playerPos = player.transform.position;
         var camPos = gameObject.transform.position;
-        if (playerPos.x > camPos.x + width/2)
-            MoveCam(width, 0);
-        if (playerPos.x < camPos.x - width/2)
-            MoveCam(-width, 0);
-        if (playerPos.y > camPos.y + height / 2)
-            MoveCam(0, height);
-        if (playerPos.y < camPos.y - height / 2)
-            MoveCam(0, -height);
+        camPos = playerPos;
 	}
 
     void MoveCam(float xmove, float ymove) {

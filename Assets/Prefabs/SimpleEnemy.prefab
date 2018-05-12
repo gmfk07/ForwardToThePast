@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50874762066390362}
   - component: {fileID: 114632716895197728}
   - component: {fileID: 114719289670260400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SimpleEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  cam: {fileID: 0}
 --- !u!114 &114719289670260400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,6 +113,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  dropMoney: 1
+  coinSpeed: 0.1
+  hurtOnContact: 1
+  coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
 --- !u!212 &212880420878756166
 SpriteRenderer:
   m_ObjectHideFlags: 1
