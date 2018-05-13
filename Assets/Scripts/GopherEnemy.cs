@@ -4,25 +4,39 @@ using UnityEngine;
 
 public class GopherEnemy : MonoBehaviour {
 
+    SpriteRenderer render;
+
     public float popTimer = 1f;
     public float hideTimer = 0.5f;
     public float projectileSpeed = 4f;
     public float projectileTimer = 2f;
+    public Color hiddenColor = Color.gray;
+    public Color popColor = Color.magenta;
     private bool hidden = true;
     public GameObject projectileObject;
+    public bool smartTargeting = false;
+    private GameObject player;
 
     private void Start()
     {
+        player = GameObject.Find("Player");
         StartCoroutine(Pop());
+        render = GetComponent<SpriteRenderer>();
     }
 
     // Use this for initialization
     private void Update()
     {
         if (hidden)
+        {
+            render.color = hiddenColor;
             gameObject.layer = 0;
+        }
         else
+        {
+            render.color = popColor;
             gameObject.layer = 8;
+        }
     }
 
     IEnumerator Pop()
@@ -33,8 +47,17 @@ public class GopherEnemy : MonoBehaviour {
             hidden = false;
             var created = Instantiate(projectileObject);
             created.transform.position = transform.position;
-            var angle = Random.Range(0, 360);
-            created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle) * projectileSpeed, Mathf.Cos(angle) * projectileSpeed));
+            float angle;
+            if (!smartTargeting)
+            {
+                angle = Random.Range(0, 2 * Mathf.PI);
+                created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle) * projectileSpeed, Mathf.Cos(angle) * projectileSpeed));
+            }
+            else
+            {
+                Vector3 dir = player.transform.position - transform.position;
+                created.GetComponent<Rigidbody2D>().AddForce(dir.normalized * projectileSpeed);
+            }
             created.GetComponent<Projectile>().timer = projectileTimer;
             yield return new WaitForSeconds(hideTimer);
             hidden = true;
