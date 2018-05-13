@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4473403836692838}
   - component: {fileID: 212550597560005308}
   - component: {fileID: 61261182389187868}
-  - component: {fileID: 114398175488347262}
-  - component: {fileID: 114824462483357194}
+  - component: {fileID: 114306977717169174}
+  - component: {fileID: 114756854230092322}
   m_Layer: 8
   m_Name: GopherEnemy
   m_TagString: Enemy
@@ -68,7 +68,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.14}
   m_EdgeRadius: 0
---- !u!114 &114398175488347262
+--- !u!114 &114306977717169174
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,19 +76,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542001464474880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62a8176e5d40714cb1230082c918dcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 995edb75fb958114fbb11e5a816d009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  dropMoney: 2
-  dropHealthChance: 0.5
+  dropMoney: 1
+  dropHealthChance: 0.15
   coinMaxSpeed: 200
   coinMinSpeed: 100
   hurtOnContact: 1
   coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
   healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
     type: 2}
---- !u!114 &114824462483357194
+--- !u!114 &114756854230092322
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,17 +96,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542001464474880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f088b386f332745989d8b7cb18f431, type: 3}
+  m_Script: {fileID: 11500000, guid: 31e54a79c4d9a2b4fb6b0feb53318a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   popTimer: 1
   hideTimer: 1
-  projectileSpeed: 100
+  projectileSpeed: 200
   projectileTimer: 2
   hiddenColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   popColor: {r: 1, g: 0, b: 1, a: 1}
   projectileObject: {fileID: 1100680057653266, guid: f16141b1d0779ce418ed1370a4247304,
     type: 2}
+  smartTargeting: 0
 --- !u!212 &212550597560005308
 SpriteRenderer:
   m_ObjectHideFlags: 1
