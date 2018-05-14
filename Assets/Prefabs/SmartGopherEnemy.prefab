@@ -102,7 +102,7 @@ MonoBehaviour:
   popTimer: 1
   hideTimer: 1
   projectileSpeed: 200
-  projectileTimer: 2
+  projectileTimer: 1.5
   hiddenColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   popColor: {r: 1, g: 0, b: 1, a: 1}
   projectileObject: {fileID: 1100680057653266, guid: f16141b1d0779ce418ed1370a4247304,
