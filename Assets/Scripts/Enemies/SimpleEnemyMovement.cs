@@ -7,11 +7,15 @@ public class SimpleEnemyMovement : MonoBehaviour {
     public float speed;
     //private GameObject cam;
     private Vector3 direction;
+    public bool vert = true;
 
     private void Start()
     {
         //cam = GameObject.Find("Main Camera");
-        direction = Vector3.up;
+        if (vert)
+            direction = Vector3.up;
+        else
+            direction = Vector3.right;
     }
 
     // Update is called once per frame
@@ -20,7 +24,7 @@ public class SimpleEnemyMovement : MonoBehaviour {
         Move();
 	}
 
-    private void OnCollisionStay2D(Collision2D collider)
+    private void OnCollisionEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Wall")
             direction = -direction;

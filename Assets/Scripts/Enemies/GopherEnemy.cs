@@ -8,6 +8,7 @@ public class GopherEnemy : MonoBehaviour {
 
     public float popTimer = 1f;
     public float hideTimer = 0.5f;
+    public float shootRange = 6.5f;
     public float projectileSpeed = 4f;
     public float projectileTimer = 2f;
     public Color hiddenColor = Color.gray;
@@ -16,6 +17,7 @@ public class GopherEnemy : MonoBehaviour {
     public GameObject projectileObject;
     public bool smartTargeting = false;
     private GameObject player;
+    private bool shooting = false;
 
     private void Start()
     {
@@ -27,6 +29,12 @@ public class GopherEnemy : MonoBehaviour {
     // Use this for initialization
     private void Update()
     {
+        Vector3 direction = player.transform.position - transform.position;
+        if (direction.magnitude <= shootRange && !shooting)
+            shooting = true;
+        if (direction.magnitude > shootRange && shooting)
+            shooting = false;
+
         if (hidden)
         {
             render.color = hiddenColor;
@@ -44,23 +52,26 @@ public class GopherEnemy : MonoBehaviour {
         while (true)
         {
             yield return new WaitForSeconds(popTimer);
-            hidden = false;
-            var created = Instantiate(projectileObject);
-            created.transform.position = transform.position;
-            float angle;
-            if (!smartTargeting)
+            if (shooting)
             {
-                angle = Random.Range(0, 2 * Mathf.PI);
-                created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle) * projectileSpeed, Mathf.Cos(angle) * projectileSpeed));
+                hidden = false;
+                var created = Instantiate(projectileObject);
+                created.transform.position = transform.position;
+                float angle;
+                if (!smartTargeting)
+                {
+                    angle = Random.Range(0, 2 * Mathf.PI);
+                    created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle) * projectileSpeed, Mathf.Cos(angle) * projectileSpeed));
+                }
+                else
+                {
+                    Vector3 dir = player.transform.position - transform.position;
+                    created.GetComponent<Rigidbody2D>().AddForce(dir.normalized * projectileSpeed);
+                }
+                created.GetComponent<Projectile>().timer = projectileTimer;
+                yield return new WaitForSeconds(hideTimer);
+                hidden = true;
             }
-            else
-            {
-                Vector3 dir = player.transform.position - transform.position;
-                created.GetComponent<Rigidbody2D>().AddForce(dir.normalized * projectileSpeed);
-            }
-            created.GetComponent<Projectile>().timer = projectileTimer;
-            yield return new WaitForSeconds(hideTimer);
-            hidden = true;
         }
     }
 }

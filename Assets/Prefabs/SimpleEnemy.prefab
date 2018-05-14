@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212880420878756166}
   - component: {fileID: 61797352425179626}
   - component: {fileID: 50874762066390362}
-  - component: {fileID: 114657952710028130}
   - component: {fileID: 114489997392366354}
+  - component: {fileID: 114834117122518044}
   m_Layer: 8
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -101,7 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
---- !u!114 &114657952710028130
+  vert: 1
+--- !u!114 &114834117122518044
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,12 +110,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1088466757657626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62a8176e5d40714cb1230082c918dcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 995edb75fb958114fbb11e5a816d009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  dropMoney: 2
-  dropHealthChance: 0.5
+  dropMoney: 1
+  dropHealthChance: 0.1
   coinMaxSpeed: 200
   coinMinSpeed: 100
   hurtOnContact: 1
