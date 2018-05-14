@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour {
     public int money = 0;
     public int health = 0;
+    public bool maxHealth = false;
     public Artifact artifact;
 
     private void Start()
@@ -20,8 +21,11 @@ public class Pickup : MonoBehaviour {
             {
                 artifact.Activate();
             }
-            collider.gameObject.GetComponent<PlayerStats>().money += money;
-            collider.gameObject.GetComponent<PlayerStats>().IncreaseHealth(health);
+            var stats = collider.gameObject.GetComponent<PlayerStats>();
+            stats.money += money;
+            if (maxHealth)
+                stats.maxHealth += health;
+            stats.IncreaseHealth(health);
             Destroy(gameObject);
         }
     }
