@@ -288,6 +288,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyBasic.cs" />
     <Compile Include="Assets\Scripts\Enemies\GopherEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\HunterEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\ShooterEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\SimpleEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Managers\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />

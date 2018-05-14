@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popTimer: 1
   hideTimer: 1
+  shootRange: 6.5
   projectileSpeed: 200
   projectileTimer: 1.5
   hiddenColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

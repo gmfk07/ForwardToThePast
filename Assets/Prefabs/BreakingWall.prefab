@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4511978872457212}
   - component: {fileID: 212488272342111222}
   - component: {fileID: 61378741937061370}
-  - component: {fileID: 114887074779071762}
   m_Layer: 8
   m_Name: BreakingWall
   m_TagString: Wall
@@ -67,25 +66,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.14}
   m_EdgeRadius: 0
---- !u!114 &114887074779071762
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1263901918793670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62a8176e5d40714cb1230082c918dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  dropMoney: 0
-  dropHealthChance: 0
-  coinMaxSpeed: 200
-  coinMinSpeed: 100
-  hurtOnContact: 0
-  coinObject: {fileID: 0}
-  healthObject: {fileID: 0}
 --- !u!212 &212488272342111222
 SpriteRenderer:
   m_ObjectHideFlags: 1
