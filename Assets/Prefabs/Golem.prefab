@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61363884528236398}
   - component: {fileID: 50817465168417326}
   - component: {fileID: 114671290981476970}
+  - component: {fileID: 114519589277183942}
   m_Layer: 8
   m_Name: Golem
   m_TagString: Enemy
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584578050968568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.56, y: 38.76, z: 0}
+  m_LocalPosition: {x: -0.5, y: 4.3, z: 0}
   m_LocalScale: {x: 15.502569, y: 14.574947, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +89,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.14}
   m_EdgeRadius: 0
+--- !u!114 &114519589277183942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584578050968568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a27190581eb1b24a992f2567611aaa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage1ShootTime: 1
+  stage1ReloadTime: 0.2
+  stage1Angle: 0.2617994
+  projectileSpeed: 0.1
+  stage1MagCount: 3
+  projectileObject: {fileID: 1100680057653266, guid: f16141b1d0779ce418ed1370a4247304,
+    type: 2}
 --- !u!114 &114671290981476970
 MonoBehaviour:
   m_ObjectHideFlags: 1
