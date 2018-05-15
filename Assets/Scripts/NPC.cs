@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour {
 
+    public Dialogue firstDialogue;
     public Dialogue dialogue;
     public float interactRadius = 2f;
 
+    int timesInteracted = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +16,11 @@ public class NPC : MonoBehaviour {
 
     //Can be overriden for custom interaction
     public virtual void Talk() {
-        DialogueManager.instance.StartDialogue(dialogue);
+        if (!firstDialogue.isEmpty() && timesInteracted == 0)
+            DialogueManager.instance.StartDialogue(firstDialogue);
+        else
+            DialogueManager.instance.StartDialogue(dialogue);
+        ++timesInteracted;
     }
 
     private void OnDrawGizmosSelected()
