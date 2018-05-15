@@ -14,7 +14,6 @@ public class NPC : MonoBehaviour {
 
     //Can be overriden for custom interaction
     public virtual void Talk() {
-        Debug.Log("Talk, talk, talk.");
         DialogueManager.instance.StartDialogue(dialogue);
     }
 
