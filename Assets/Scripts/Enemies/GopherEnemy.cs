@@ -18,6 +18,7 @@ public class GopherEnemy : MonoBehaviour {
     public bool smartTargeting = false;
     private GameObject player;
     private bool shooting = false;
+    public float customAngle;
 
     private void Start()
     {
@@ -60,7 +61,8 @@ public class GopherEnemy : MonoBehaviour {
                 float angle;
                 if (!smartTargeting)
                 {
-                    angle = Random.Range(0, 2 * Mathf.PI);
+                    //angle = Random.Range(0, 2 * Mathf.PI);
+                    angle = customAngle*Mathf.PI/180;
                     created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle) * projectileSpeed, Mathf.Cos(angle) * projectileSpeed));
                 }
                 else

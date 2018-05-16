@@ -17,10 +17,6 @@ public class SwordSlash : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider)
     {
         int colliderId = collider.GetInstanceID();
-        if(collider.gameObject.layer == 9)
-        {
-            Destroy(collider.gameObject);
-        }
         if ((collider.gameObject.layer == 8 || collider.gameObject.layer == 10) && !hitList.Contains(colliderId))
         {
             collider.gameObject.GetComponent<EnemyBasic>().TakeDamage();

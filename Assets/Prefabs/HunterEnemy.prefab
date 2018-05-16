@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701c87bf3404b7347b05581cd1a70f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 5
-  deaggroRange: 10
+  aggroRange: 8
+  deaggroRange: 12
   speed: 650
 --- !u!114 &114512125192396484
 MonoBehaviour:
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   dropMoney: 2
+  dropMoneyChance: 1
   dropHealthChance: 0.1
   coinMaxSpeed: 200
   coinMinSpeed: 100
