@@ -5,7 +5,7 @@ using UnityEngine;
 public class Golem : MonoBehaviour {
     public float projectileTimer = 1.5f;
     private int stage = 1;
-    private int maxHealth;
+    public int maxHealth;
     private int health;
     public float stage1ShootTime = 1.0f;
     public float stage1ReloadTime = 0.2f;
@@ -50,6 +50,15 @@ public class Golem : MonoBehaviour {
         }
 	}
 
+    public void PlayerDied()
+    {
+        health = maxHealth;
+        GetComponent<EnemyBasic>().health = health;
+        stage = 1;
+        StopAllCoroutines();
+        StartCoroutine(Stage1());
+    }
+
     IEnumerator Stage1()
     {
         while (true)
@@ -79,7 +88,6 @@ public class Golem : MonoBehaviour {
             var created = Instantiate(projectileObject);
             created.transform.position = transform.position;
             created.GetComponent<Projectile>().timer = projectileTimer;
-            var dir = player.transform.position - transform.position;
             created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle) * projectileSpeed, Mathf.Cos(angle) * projectileSpeed));
             angle += stage2Angle;
             yield return new WaitForSeconds(stage2ReloadTime);

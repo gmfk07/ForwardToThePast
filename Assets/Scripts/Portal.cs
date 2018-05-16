@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portal : MonoBehaviour {
+public class Portal : NPC {
     public float x;
     public float y;
     public bool time;
+    private GameObject player;
 
-    void OnTriggerEnter2D(Collider2D collider)
+    private void Start()
     {
-        if (collider.gameObject.tag == "Player")
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+
+    public override void Talk()
+    {
+        player.transform.position = new Vector3(x, y, 0);
+        if (time)
         {
-            collider.gameObject.transform.position = new Vector3(x, y, 0);
-            if (time)
-            {
-                collider.gameObject.GetComponent<PlayerStats>().past = !collider.gameObject.GetComponent<PlayerStats>().past;
-            }
+           player.GetComponent<PlayerStats>().past = !player.GetComponent<PlayerStats>().past;
         }
     }
 }
