@@ -3,17 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerMovement : MonoBehaviour {
 
     public float speed;
     public float attackCooldown = 0.3f;
+    public TextMesh textStatus;
     private bool canAttack;
     public GameObject slash;
     private GameObject created;
+    bool canInteract;
+    
 
     private void Start()
     {
         canAttack = true;
+        textStatus = GetComponentInChildren<TextMesh>();
     }
 
     private void FixedUpdate()
@@ -29,13 +34,22 @@ public class PlayerMovement : MonoBehaviour {
             Attack(attackDirection);
 
         //Talk
+        NPC npc = FindTalkableNpc(); //potential optimization
+        //Closest Notification
+        canInteract = npc != null;
+        if (canInteract) {
+            textStatus.text = "?";
+        } else {
+            textStatus.text = "";
+        }
+
         if (Input.GetButtonDown("Talk") && !DialogueManager.instance.IsInDialogue())
         {
-            NPC npc = FindTalkableNpc();
-            if (npc != null)
+            if (canInteract)
                 npc.Talk();
         }
     }
+
 
     //Attempts to find an npc that is within its talk range
     private NPC FindTalkableNpc()
