@@ -12,8 +12,10 @@ public class PlayerStats : MonoBehaviour {
     public int money = 0;
     public float invincibleTimer;
     public float maxInvincibleTimer;
-    public float spawnx;
-    public float spawny;
+    public float spawnxPast;
+    public float spawnyPast;
+    public float spawnxFuture;
+    public float spawnyFuture;
     private Renderer playerRenderer;
 
     private void Start()
@@ -36,7 +38,10 @@ public class PlayerStats : MonoBehaviour {
         //Die die die
         if (health == 0)
         {
-            transform.position = new Vector3(spawnx, spawny, transform.position.z);
+            if (past)
+                transform.position = new Vector3(spawnxPast, spawnyPast, transform.position.z);
+            else
+                transform.position = new Vector3(spawnxFuture, spawnyFuture, transform.position.z);
             health = maxHealth;
             money = 0;
             var bossList = GameObject.FindGameObjectsWithTag("Boss");
@@ -56,7 +61,6 @@ public class PlayerStats : MonoBehaviour {
         if (!invincible)
         {
             health-= 1;
-            //TODO: Die when health reaches 0
             invincible = true;
             StartTimer();
         }
