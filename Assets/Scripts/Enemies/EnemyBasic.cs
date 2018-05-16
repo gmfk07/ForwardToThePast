@@ -43,7 +43,10 @@ public class EnemyBasic : MonoBehaviour {
             {
                 var testHealthVar = Random.value;
                 if (testHealthVar <= dropHealthChance)
+                {
                     created = Instantiate(healthObject) as GameObject;
+                    created.transform.position = transform.position;
+                }
                 else
                     continue;
             }

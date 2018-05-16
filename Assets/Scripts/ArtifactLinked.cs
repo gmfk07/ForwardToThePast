@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArtifactLinked : MonoBehaviour {
 
-    public ArtifactType artifactType = ArtifactType.Default;
+    public ArtifactType artifactType = ArtifactType.Purple;
 
     // Just came out of watching Infinity War ):
     public void Disintegrate() {
