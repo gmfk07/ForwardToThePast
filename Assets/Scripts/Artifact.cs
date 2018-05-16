@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Artifact : MonoBehaviour {
 
-    public ArtifactType type = ArtifactType.Default;
+    public ArtifactType type = ArtifactType.Purple;
 	
     //One time. Upon collision with player
 	public void Activate() {
@@ -17,4 +17,4 @@ public class Artifact : MonoBehaviour {
     }
 }
 
-public enum ArtifactType { Default }
+public enum ArtifactType { Purple, Pink, Red, Blue, Green, Yellow, Orange }
