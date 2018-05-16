@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
     public float timer = 1.0f;
+    private GameObject player;
 
     private void Start()
     {
+        player = PlayerManager.Player;
         StartCoroutine(DeathTimer());
     }
 
@@ -16,10 +18,12 @@ public class Projectile : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    void OnCollisionStay2D(Collision2D collider)
+    void OnCollisionEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player" || collider.gameObject.tag == "Wall")
         {
+            if (collider.gameObject.tag == "Player")
+                player.GetComponent<PlayerStats>().HurtPlayer();
             Destroy(gameObject);
         }
     }

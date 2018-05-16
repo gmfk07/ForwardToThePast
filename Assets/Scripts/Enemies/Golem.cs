@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Golem : MonoBehaviour {
-
+    public float projectileTimer = 1.5f;
     private int stage = 1;
     private int maxHealth;
     private int health;
@@ -16,6 +16,7 @@ public class Golem : MonoBehaviour {
     public float projectileSpeed = 0.1f;
     public int stage1MagCount = 3;
     public GameObject projectileObject;
+    public GameObject artifactObject;
     GameObject player;
 
     // Use this for initialization
@@ -77,6 +78,7 @@ public class Golem : MonoBehaviour {
         {
             var created = Instantiate(projectileObject);
             created.transform.position = transform.position;
+            created.GetComponent<Projectile>().timer = projectileTimer;
             var dir = player.transform.position - transform.position;
             created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle) * projectileSpeed, Mathf.Cos(angle) * projectileSpeed));
             angle += stage2Angle;
@@ -93,13 +95,20 @@ public class Golem : MonoBehaviour {
             var created = Instantiate(projectileObject);
             created.transform.position = transform.position;
             created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle1) * projectileSpeed, Mathf.Cos(angle1) * projectileSpeed));
+            created.GetComponent<Projectile>().timer = projectileTimer;
             created = Instantiate(projectileObject);
             created.transform.position = transform.position;
             created.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(angle2) * projectileSpeed, Mathf.Cos(angle2) * projectileSpeed));
+            created.GetComponent<Projectile>().timer = projectileTimer;
             angle1 += stage2Angle;
             angle2 -= stage3Angle;
             yield return new WaitForSeconds(stage2ReloadTime);
         }
     }
 
+    private void OnDestroy()
+    {
+        var created = Instantiate(artifactObject);
+        created.transform.position = transform.position;
+    }
 }
