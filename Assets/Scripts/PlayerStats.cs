@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour {
     public int money = 0;
     public float invincibleTimer;
     public float maxInvincibleTimer;
+    public float spawnx;
+    public float spawny;
     private Renderer playerRenderer;
 
     private void Start()
@@ -28,6 +30,24 @@ public class PlayerStats : MonoBehaviour {
             if (invincibleTimer <= 0)
             {
                 invincible = false;
+            }
+        }
+
+        //Die die die
+        if (health == 0)
+        {
+            transform.position = new Vector3(spawnx, spawny, transform.position.z);
+            health = maxHealth;
+            money = 0;
+            var bossList = GameObject.FindGameObjectsWithTag("Boss");
+            for (int i = 0; i < bossList.Length; i++)
+            {
+                if (bossList[i].GetComponent<Golem>() != null)
+                {
+                    bossList[i].GetComponent<Golem>().PlayerDied();
+                }
+                else
+                    bossList[i].GetComponent<EnemyBasic>().health = bossList[i].GetComponent<FinalBoss>().maxHealth;
             }
         }
     }

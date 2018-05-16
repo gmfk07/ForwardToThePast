@@ -1972,25 +1972,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe83f00ac1a1b914e9d7bbe052289074, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &153088168 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 570496762}
---- !u!114 &153088169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 153088168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 21
-  y: 34.5
-  time: 1
 --- !u!1001 &156081189
 Prefab:
   m_ObjectHideFlags: 0
@@ -2690,11 +2671,6 @@ Prefab:
     - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_Name
       value: Timestone (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
@@ -4486,25 +4462,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35e7a1efc08566e458f0b995a874b73b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &333556140 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 1178313476}
---- !u!114 &333556141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 333556140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
-  y: 52
-  time: 1
 --- !u!1001 &335520587
 Prefab:
   m_ObjectHideFlags: 0
@@ -4975,18 +4932,11 @@ Prefab:
       propertyPath: m_Name
       value: Timestone (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &362674973
@@ -5812,7 +5762,7 @@ Transform:
   - {fileID: 1339430883}
   - {fileID: 730506077}
   m_Father: {fileID: 0}
-  m_RootOrder: 266
+  m_RootOrder: 267
   m_LocalEulerAnglesHint: {x: 0, y: -1.3470001, z: 0}
 --- !u!1001 &430913052
 Prefab:
@@ -6692,25 +6642,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca8a9406b619372458838fa1c643a5c3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &497715449 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 1464783146}
---- !u!114 &497715450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 497715449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 91
-  y: 33
-  time: 1
 --- !u!1001 &502312559
 Prefab:
   m_ObjectHideFlags: 0
@@ -7354,47 +7285,6 @@ Prefab:
       propertyPath: m_Name
       value: Golem (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114519589277183942, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: stage2Angle
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 114519589277183942, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: stage3Angle
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 114519589277183942, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: projectileSpeed
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 114519589277183942, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: projectileTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114519589277183942, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: stage2ReloadTime
-      value: 0.155
-      objectReference: {fileID: 0}
-    - target: {fileID: 114671290981476970, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: health
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114671290981476970, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: hurtOnContact
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114519589277183942, guid: 33e977ebdc5c73f41b5968d0b56f3867,
-        type: 2}
-      propertyPath: artifactObject
-      value: 
-      objectReference: {fileID: 1004128355900812, guid: ff45595784c94bb42a2e8b82f9b2c48c,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33e977ebdc5c73f41b5968d0b56f3867, type: 2}
   m_IsPrefabParent: 0
@@ -7448,25 +7338,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca8a9406b619372458838fa1c643a5c3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &544395215 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 1451214734}
---- !u!114 &544395216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 544395215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 68
-  y: -35
-  time: 1
 --- !u!1001 &544843715
 Prefab:
   m_ObjectHideFlags: 0
@@ -7959,11 +7830,6 @@ Prefab:
       propertyPath: m_Name
       value: Timestone (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
   m_IsPrefabParent: 0
@@ -8109,11 +7975,6 @@ Prefab:
     - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_Name
       value: Timestone (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
@@ -8276,25 +8137,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe83f00ac1a1b914e9d7bbe052289074, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &586670354 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 215626610}
---- !u!114 &586670355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 586670354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: -1
-  y: -36
-  time: 1
 --- !u!1001 &594337014
 Prefab:
   m_ObjectHideFlags: 0
@@ -10209,16 +10051,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.sentences.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4049012158959364, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.072017
@@ -10250,27 +10082,6 @@ Prefab:
     - target: {fileID: 4049012158959364, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_RootOrder
       value: 216
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: A strange glowing crystal attracts your attention. Transfixed, you think
-        you hear a voice coming from it. You feel tempted to reach out and touch it...
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.name
-      value: Timestone
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.sentences.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
@@ -10836,25 +10647,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca8a9406b619372458838fa1c643a5c3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &799223962 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 358538329}
---- !u!114 &799223968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 799223962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
-  y: 0
-  time: 0
 --- !u!1001 &804551372
 Prefab:
   m_ObjectHideFlags: 0
@@ -11688,25 +11480,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80c484a8ec12ca42911d53e52f048ca, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &857238106 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 747773361}
---- !u!114 &857238112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 857238106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 69
-  y: 0
-  time: 1
 --- !u!1001 &863183631
 Prefab:
   m_ObjectHideFlags: 0
@@ -13174,7 +12947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4422052794802684, guid: e80c484a8ec12ca42911d53e52f048ca, type: 2}
       propertyPath: m_RootOrder
-      value: 262
+      value: 261
       objectReference: {fileID: 0}
     - target: {fileID: 1537077638418732, guid: e80c484a8ec12ca42911d53e52f048ca, type: 2}
       propertyPath: m_Name
@@ -13789,7 +13562,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4944848889191878, guid: ca8a9406b619372458838fa1c643a5c3, type: 2}
       propertyPath: m_RootOrder
-      value: 267
+      value: 266
       objectReference: {fileID: 0}
     - target: {fileID: 1850403637940590, guid: ca8a9406b619372458838fa1c643a5c3, type: 2}
       propertyPath: m_Name
@@ -13989,7 +13762,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4351074261981382, guid: b4cc13e4a1d6e834f94dd98856ca7924, type: 2}
       propertyPath: m_RootOrder
-      value: 264
+      value: 263
       objectReference: {fileID: 0}
     - target: {fileID: 1160164129227122, guid: b4cc13e4a1d6e834f94dd98856ca7924, type: 2}
       propertyPath: m_Name
@@ -15016,16 +14789,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.sentences.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4049012158959364, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_LocalPosition.x
       value: 70.38402
@@ -15058,29 +14821,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 444
       objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: Dialogue dialogue dialogue, pick up the pink thingy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.name
-      value: Timestone
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.sentences.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_Name
       value: Timestone (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
@@ -16370,7 +16113,7 @@ RectTransform:
   m_Children:
   - {fileID: 1807358528}
   m_Father: {fileID: 0}
-  m_RootOrder: 261
+  m_RootOrder: 262
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16437,7 +16180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 263
+  m_RootOrder: 264
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1289286589
 Prefab:
@@ -16683,25 +16426,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35e7a1efc08566e458f0b995a874b73b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1301948713 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 561402572}
---- !u!114 &1301948719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1301948713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 110
-  y: 2
-  time: 1
 --- !u!1001 &1305104456
 Prefab:
   m_ObjectHideFlags: 0
@@ -17870,21 +17594,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 544
       objectReference: {fileID: 0}
-    - target: {fileID: 212988017029642220, guid: 06fe99b00fc07d143a910e47401bd3f6,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.8113208
-      objectReference: {fileID: 0}
-    - target: {fileID: 212988017029642220, guid: 06fe99b00fc07d143a910e47401bd3f6,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.8113208
-      objectReference: {fileID: 0}
-    - target: {fileID: 212988017029642220, guid: 06fe99b00fc07d143a910e47401bd3f6,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.8113208
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06fe99b00fc07d143a910e47401bd3f6, type: 2}
   m_IsPrefabParent: 0
@@ -18773,11 +18482,6 @@ Prefab:
       propertyPath: m_Name
       value: Timestone (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
   m_IsPrefabParent: 0
@@ -18979,11 +18683,6 @@ Prefab:
     - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_Name
       value: Timestone (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
@@ -21536,7 +21235,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4963637694670956, guid: febc4e2d17919c74c967f06286ffaf1e, type: 2}
       propertyPath: m_RootOrder
-      value: 270
+      value: 269
       objectReference: {fileID: 0}
     - target: {fileID: 1261333519567122, guid: febc4e2d17919c74c967f06286ffaf1e, type: 2}
       propertyPath: m_Name
@@ -22108,25 +21807,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe83f00ac1a1b914e9d7bbe052289074, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1701727637 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069,
-    type: 2}
-  m_PrefabInternal: {fileID: 2132046189}
---- !u!114 &1701727643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1701727637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d5bd1b64034f9419ae4c5796fd6155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 41
-  y: 2
-  time: 1
 --- !u!1001 &1710815116
 Prefab:
   m_ObjectHideFlags: 0
@@ -23552,11 +23232,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4049012158959364, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_LocalPosition.x
       value: -71.74199
@@ -23588,12 +23263,6 @@ Prefab:
     - target: {fileID: 4049012158959364, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_RootOrder
       value: 328
-      objectReference: {fileID: 0}
-    - target: {fileID: 114691738469537020, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: You notice a strange, glowing crystal on the ground. Transfixed, you
-        approach it. There seems to be a voice coming from it...
       objectReference: {fileID: 0}
     - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_Name
@@ -28282,7 +27951,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 269
+  m_RootOrder: 270
   m_LocalEulerAnglesHint: {x: 0, y: -1.3470001, z: 0}
 --- !u!1001 &2121380133
 Prefab:
@@ -28529,11 +28198,6 @@ Prefab:
     - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_Name
       value: Timestone (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61292209964774122, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}

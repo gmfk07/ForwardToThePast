@@ -7,11 +7,13 @@ public class FinalBoss : MonoBehaviour {
     public bool chasing = true;
     public float battleStartRange = 10f;
     public float speed = 4f;
+    public int maxHealth;
     private Rigidbody2D rb;
     private GameObject player;
 
 	// Use this for initialization
 	void Start () {
+        maxHealth = GetComponent<EnemyBasic>().health;
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
 	}

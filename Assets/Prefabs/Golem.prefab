@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114519589277183942}
   m_Layer: 8
   m_Name: Golem
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a27190581eb1b24a992f2567611aaa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileTimer: 1.5
+  maxHealth: 0
   stage1ShootTime: 1.2
   stage1ReloadTime: 0.225
   stage1Angle: 0.2617994
@@ -110,6 +112,7 @@ MonoBehaviour:
   stage1MagCount: 3
   projectileObject: {fileID: 1100680057653266, guid: f16141b1d0779ce418ed1370a4247304,
     type: 2}
+  artifactObject: {fileID: 0}
 --- !u!114 &114671290981476970
 MonoBehaviour:
   m_ObjectHideFlags: 1
