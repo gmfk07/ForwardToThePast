@@ -35,6 +35,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if(DialogueManager.instance.IsInDialogue())
+        {
+            return;
+        }
         //Movement
         float vertInput = Input.GetAxis("Vertical");
         float horInput = Input.GetAxis("Horizontal");
@@ -47,6 +51,8 @@ public class PlayerMovement : MonoBehaviour {
 
         //Talk
         NPC npc = FindTalkableNpc(); //potential optimization
+        Portal portal = FindClosestPortal();
+        Boolean canPort = portal != null;
         //Closest Notification
         canInteract = npc != null;
         if (canInteract)
@@ -62,6 +68,13 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (canInteract)
                 npc.Talk();
+        }
+        if (Input.GetKeyDown(KeyCode.E) && !DialogueManager.instance.IsInDialogue())
+        {
+            if (canPort)
+            {
+                portal.port();
+            }
         }
     }
 
@@ -122,6 +135,24 @@ public class PlayerMovement : MonoBehaviour {
         }
         return talkable;
     }
+    private Portal FindClosestPortal()
+    {
+        Portal portal = null;
+        float closestDist = float.MaxValue;
+        Portal[] portals= GameObject.FindObjectsOfType<Portal>();
+        foreach (Portal p in portals)
+        {
+            Vector2 toPort = transform.position - p.transform.position;
+            float dist = toPort.magnitude;
+            if (dist < p.interactRadius && dist < closestDist)
+            {
+                closestDist = dist;
+                portal = p;
+            }
+        }
+        return portal;
+    }
+
 
     //Attack Functions
     IEnumerator AttackTimer()
