@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Only used with FinalBoss
 public class EnemySlash : MonoBehaviour {
 
 	// Update is called once per frame
@@ -14,6 +15,7 @@ public class EnemySlash : MonoBehaviour {
         if (collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<PlayerStats>().HurtPlayer();
+            FindObjectOfType<FinalBoss>().SucessfullyHitPlayer();
         }
     }
 }
