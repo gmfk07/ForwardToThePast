@@ -13,12 +13,24 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject slash;
     private GameObject created;
     bool canInteract;
-    
+    public Sprite leftPast;
+    public Sprite downPast;
+    public Sprite rightPast;
+    public Sprite upPast;
+    public Sprite leftFuture;
+    public Sprite downFuture;
+    public Sprite rightFuture;
+    public Sprite upFuture;
+    private SpriteRenderer sr;
+    private PlayerStats ps;
+    Direction dir = Direction.None;
 
     private void Start()
     {
         canAttack = true;
         textStatus = GetComponentInChildren<TextMesh>();
+        sr = gameObject.GetComponent<SpriteRenderer>();
+        ps = gameObject.GetComponent<PlayerStats>();
     }
 
     private void FixedUpdate()
@@ -27,7 +39,7 @@ public class PlayerMovement : MonoBehaviour {
         float vertInput = Input.GetAxis("Vertical");
         float horInput = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horInput * speed, vertInput * speed);
-        
+        SetSprite(vertInput, horInput);
         //Attack
         Direction? attackDirection = GetAttackDirection();
         if (canAttack && attackDirection != null)
@@ -37,9 +49,12 @@ public class PlayerMovement : MonoBehaviour {
         NPC npc = FindTalkableNpc(); //potential optimization
         //Closest Notification
         canInteract = npc != null;
-        if (canInteract) {
+        if (canInteract)
+        {
             textStatus.text = "?";
-        } else {
+        }
+        else
+        {
             textStatus.text = "";
         }
 
@@ -47,6 +62,44 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (canInteract)
                 npc.Talk();
+        }
+    }
+
+    //CENSORED
+    //DON'T DEAD
+    //OPEN  INSIDE
+    private void SetSprite(float vertInput, float horInput)
+    {
+        if (horInput <= -0.5)
+            dir = Direction.Left;
+        if (horInput >= 0.5)
+            dir = Direction.Right;
+        if (vertInput <= -0.5)
+            dir = Direction.Down;
+        if (vertInput >= 0.5)
+            dir = Direction.Up;
+        //Actually set the sprite
+        if (ps.past)
+        {
+            if (dir == Direction.Left)
+                sr.sprite = leftPast;
+            if (dir == Direction.Right)
+                sr.sprite = rightPast;
+            if (dir == Direction.Up)
+                sr.sprite = upPast;
+            if (dir == Direction.Down)
+                sr.sprite = downPast;
+        }
+        else
+        {
+            if (dir == Direction.Left)
+                sr.sprite = leftFuture;
+            if (dir == Direction.Right)
+                sr.sprite = rightFuture;
+            if (dir == Direction.Up)
+                sr.sprite = upFuture;
+            if (dir == Direction.Down)
+                sr.sprite = downFuture;
         }
     }
 
@@ -103,4 +156,4 @@ public class PlayerMovement : MonoBehaviour {
     }
 }
 
-public enum Direction { Left, Down, Right, Up }
+public enum Direction { Left, Down, Right, Up, None }

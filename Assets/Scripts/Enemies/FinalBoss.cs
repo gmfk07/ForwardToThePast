@@ -26,8 +26,8 @@ public class FinalBoss : MonoBehaviour {
         while (true)
         {
             yield return new WaitForSeconds(slashTime);
-            var created = Instantiate(slashObject);
-            created.transform.position = transform.position;
+            var created = Instantiate(slashObject, transform.position, Quaternion.Euler(new Vector3(0, 0, 90 + Vector3.SignedAngle(Vector3.up, transform.position - player.transform.position, Vector3.forward))));
+            created.transform.parent = gameObject.transform;
         }
     }
 
