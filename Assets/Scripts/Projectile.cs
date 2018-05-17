@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour {
 
     private void Start()
     {
-        player = PlayerManager.Player;
+        player = PlayerManager.instance.Player;
         StartCoroutine(DeathTimer());
     }
 

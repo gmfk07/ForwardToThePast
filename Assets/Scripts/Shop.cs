@@ -13,7 +13,7 @@ public class Shop : NPC {
 
     public override void Talk()
     {
-        var player = PlayerManager.Player;
+        var player = PlayerManager.instance.Player;
         if (player.GetComponent<PlayerStats>().money >= cost)
         {
             player.GetComponent<PlayerStats>().money -= cost;

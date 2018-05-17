@@ -21,7 +21,7 @@ public class SwordSlash : MonoBehaviour {
         {
             EnemyBasic enemy = collider.gameObject.GetComponent<EnemyBasic>();
             enemy.TakeDamage();
-            enemy.KnockbackEnemy(PlayerManager.Player.transform.position); //only works if has rigidbody
+            enemy.KnockbackEnemy(PlayerManager.instance.Player.transform.position); //only works if has rigidbody
 
             hitList.Add(colliderId);
         }

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 995edb75fb958114fbb11e5a816d009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 15
   dropMoney: 2
   dropMoneyChance: 1
   dropHealthChance: 0.1
@@ -110,6 +110,7 @@ MonoBehaviour:
   coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
   healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
     type: 2}
+  knockbackForce: 1000
 --- !u!114 &114710936866908702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,10 +122,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a4c331cdeaeb447876bf9d98eb6d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  chasing: 1
   battleStartRange: 10
-  speed: 350
+  slashTime: 1
+  chaseSpeed: 400
+  runSpeed: 1200
+  runTime: 1
+  maxHealth: 0
+  slashObject: {fileID: 1735448461754842, guid: cd43d8fa1fbf56b4f9a39d1a4e95010a,
+    type: 2}
 --- !u!212 &212988017029642220
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -138,7 +143,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
