@@ -85,8 +85,10 @@ MonoBehaviour:
   coinMaxSpeed: 200
   coinMinSpeed: 100
   hurtOnContact: 0
-  coinObject: {fileID: 0}
-  healthObject: {fileID: 0}
+  coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
+  healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
+    type: 2}
+  knockbackForce: 350
 --- !u!212 &212488272342111222
 SpriteRenderer:
   m_ObjectHideFlags: 1

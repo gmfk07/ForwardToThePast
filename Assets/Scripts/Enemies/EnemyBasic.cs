@@ -13,6 +13,13 @@ public class EnemyBasic : MonoBehaviour {
     public bool hurtOnContact = true;
     public GameObject coinObject;
     public GameObject healthObject;
+    public float knockbackForce = 350f;
+    Rigidbody2D enemyRigidBody;
+
+    private void Start()
+    {
+        enemyRigidBody = GetComponent<Rigidbody2D>();
+    }
 
     public void TakeDamage()
     {
@@ -24,12 +31,21 @@ public class EnemyBasic : MonoBehaviour {
         }
     }
 
+    public void KnockbackEnemy(Vector3 source, float customForce = -1) {
+        if (enemyRigidBody == null) return;
+        customForce = (customForce == -1 ? knockbackForce : customForce);
+        Vector3 dir = (transform.position - source).normalized;
+        enemyRigidBody.AddForce(dir * customForce, ForceMode2D.Impulse);
+        Debug.Log("Enemy knockbacked");
+    }
+
     void OnCollisionStay2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player" && hurtOnContact)
         {
             PlayerStats playerstats = collider.gameObject.GetComponent<PlayerStats>();
             playerstats.HurtPlayer();
+            playerstats.KnockbackPlayer(transform.position);
         }
     }
 
@@ -43,7 +59,10 @@ public class EnemyBasic : MonoBehaviour {
             {
                 var testHealthVar = Random.value;
                 if (testHealthVar <= dropHealthChance)
+                {
                     created = Instantiate(healthObject) as GameObject;
+                    created.transform.position = transform.position;
+                }
                 else
                     continue;
             }
