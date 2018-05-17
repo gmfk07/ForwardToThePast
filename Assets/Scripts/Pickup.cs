@@ -13,7 +13,7 @@ public class Pickup : MonoBehaviour {
         artifact = GetComponent<Artifact>();
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player")
         {

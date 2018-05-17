@@ -19,7 +19,10 @@ public class SwordSlash : MonoBehaviour {
         int colliderId = collider.GetInstanceID();
         if ((collider.gameObject.layer == 8 || collider.gameObject.layer == 10) && !hitList.Contains(colliderId))
         {
-            collider.gameObject.GetComponent<EnemyBasic>().TakeDamage();
+            EnemyBasic enemy = collider.gameObject.GetComponent<EnemyBasic>();
+            enemy.TakeDamage();
+            enemy.KnockbackEnemy(PlayerManager.Player.transform.position); //only works if has rigidbody
+
             hitList.Add(colliderId);
         }
         

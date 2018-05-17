@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1161198239928324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.37, y: 2.74, z: 0}
+  m_LocalPosition: {x: -2.5824568, y: 28.052282, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2.3
+  m_Mass: 100
   m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   dropMoney: 2
+  dropMoneyChance: 1
   dropHealthChance: 0.1
   coinMaxSpeed: 200
   coinMinSpeed: 100
@@ -109,6 +110,7 @@ MonoBehaviour:
   coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
   healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
     type: 2}
+  knockbackForce: 350
 --- !u!114 &114082725785773660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,7 +144,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
