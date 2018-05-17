@@ -7,15 +7,16 @@ public class PlayerManager : MonoBehaviour {
     void Awake()
     {
         instance = this;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     #endregion Singleton
 
     GameObject player;
-    public static GameObject Player { get { return instance.player; } }
+    public GameObject Player { get { return instance.player; } }
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
     }
 
 
