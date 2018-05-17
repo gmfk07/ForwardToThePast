@@ -16,11 +16,14 @@ public class PlayerStats : MonoBehaviour {
     public float spawnyPast;
     public float spawnxFuture;
     public float spawnyFuture;
+    public float knockbackForce = 6f;
     private Renderer playerRenderer;
+    private Rigidbody2D playerRigidBody;
 
     private void Start()
     {
-        playerRenderer = gameObject.GetComponent<Renderer>();
+        playerRenderer = GetComponent<Renderer>();
+        playerRigidBody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -64,6 +67,13 @@ public class PlayerStats : MonoBehaviour {
             invincible = true;
             StartTimer();
         }
+    }
+
+    //When Also Hurt By Enemy
+    public void KnockbackPlayer(Vector3 source, float customForce = -1) {
+        customForce = (customForce == -1 ? knockbackForce : customForce);
+        Vector2 dir = (transform.position - source).normalized;
+        playerRigidBody.AddForce(dir * customForce, ForceMode2D.Impulse);
     }
 
     IEnumerator Flash()

@@ -23,7 +23,12 @@ public class Projectile : MonoBehaviour {
         if (collider.gameObject.tag == "Player" || collider.gameObject.tag == "Wall")
         {
             if (collider.gameObject.tag == "Player")
-                player.GetComponent<PlayerStats>().HurtPlayer();
+            {
+                PlayerStats playerStats = player.GetComponent<PlayerStats>();
+                playerStats.HurtPlayer();
+                playerStats.KnockbackPlayer(transform.position);
+
+            }
             Destroy(gameObject);
         }
     }
