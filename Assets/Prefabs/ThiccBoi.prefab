@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggroRange: 8
   deaggroRange: 12
-  speed: 325
+  speed: 488
 --- !u!114 &114530429057931684
 MonoBehaviour:
   m_ObjectHideFlags: 1
