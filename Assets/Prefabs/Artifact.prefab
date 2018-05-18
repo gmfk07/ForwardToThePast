@@ -93,6 +93,7 @@ MonoBehaviour:
   money: 1
   health: 0
   maxHealth: 0
+  clip: {fileID: 8300000, guid: 555c7377c7aab604980be0b968ede9bd, type: 3}
   artifact: {fileID: 0}
 --- !u!114 &114391191378568332
 MonoBehaviour:

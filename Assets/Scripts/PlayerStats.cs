@@ -17,6 +17,9 @@ public class PlayerStats : MonoBehaviour {
     public float spawnxFuture;
     public float spawnyFuture;
     public float knockbackForce = 6f;
+    public AudioClip deathSound;
+    public AudioClip hurtSound;
+    private AudioSource playerAudioSource;
     private Renderer playerRenderer;
     private Rigidbody2D playerRigidBody;
 
@@ -24,6 +27,7 @@ public class PlayerStats : MonoBehaviour {
     {
         playerRenderer = GetComponent<Renderer>();
         playerRigidBody = GetComponent<Rigidbody2D>();
+        playerAudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -47,6 +51,7 @@ public class PlayerStats : MonoBehaviour {
                 transform.position = new Vector3(spawnxFuture, spawnyFuture, transform.position.z);
             health = maxHealth;
             money = 0;
+            PlaySound(deathSound);
             var bossList = GameObject.FindGameObjectsWithTag("Boss");
             for (int i = 0; i < bossList.Length; i++)
             {
@@ -60,10 +65,17 @@ public class PlayerStats : MonoBehaviour {
         }
     }
 
+    private void PlaySound(AudioClip clip)
+    {
+        playerAudioSource.clip = clip;
+        playerAudioSource.Play();
+    }
+
     public void HurtPlayer(int damage = 1) {
         if (!invincible)
         {
-            health-= 1;
+            PlaySound(hurtSound);
+            health -= 1;
             invincible = true;
             StartTimer();
         }
