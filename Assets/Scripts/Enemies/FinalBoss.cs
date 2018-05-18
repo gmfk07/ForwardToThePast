@@ -19,12 +19,14 @@ public class FinalBoss : MonoBehaviour {
     public Sprite downFuture;
     public Sprite rightFuture;
     public Sprite upFuture;
+    public Dialogue deathDialogue;
 
     SpriteRenderer sr;
     Rigidbody2D rb;
     GameObject player;
     BossState state;
     PlayerStats ps;
+    EnemyBasic enemy;
 
     bool hitPlayer = false;
 
@@ -33,6 +35,7 @@ public class FinalBoss : MonoBehaviour {
         maxHealth = GetComponent<EnemyBasic>().health;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        enemy = GetComponent<EnemyBasic>();
         player = PlayerManager.instance.Player;
         ps = player.GetComponent<PlayerStats>();
         state = BossState.Idle;
@@ -41,10 +44,15 @@ public class FinalBoss : MonoBehaviour {
             sr.sprite = downPast;
         else
             sr.sprite = downFuture;
+        enemy.onDeath += Death;
 	}
 
     public void SucessfullyHitPlayer() {
         hitPlayer = true;
+    }
+
+    public void Death() {
+        DialogueManager.instance.StartDialogue(deathDialogue);
     }
 
 	// Update is called once per frame
