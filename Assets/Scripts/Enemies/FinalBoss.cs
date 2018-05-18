@@ -11,10 +11,20 @@ public class FinalBoss : MonoBehaviour {
     public float runTime = 1f;
     public int maxHealth;
     public GameObject slashObject;
+    public Sprite leftPast;
+    public Sprite downPast;
+    public Sprite rightPast;
+    public Sprite upPast;
+    public Sprite leftFuture;
+    public Sprite downFuture;
+    public Sprite rightFuture;
+    public Sprite upFuture;
 
+    SpriteRenderer sr;
     Rigidbody2D rb;
     GameObject player;
     BossState state;
+    PlayerStats ps;
 
     bool hitPlayer = false;
 
@@ -22,9 +32,15 @@ public class FinalBoss : MonoBehaviour {
     void Start () {
         maxHealth = GetComponent<EnemyBasic>().health;
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         player = PlayerManager.instance.Player;
+        ps = player.GetComponent<PlayerStats>();
         state = BossState.Idle;
         StartCoroutine(SlashTimer());
+        if (ps.past)
+            sr.sprite = downPast;
+        else
+            sr.sprite = downFuture;
 	}
 
     public void SucessfullyHitPlayer() {
@@ -32,7 +48,7 @@ public class FinalBoss : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         Vector3 direction;
         switch (state) {
 
@@ -61,7 +77,29 @@ public class FinalBoss : MonoBehaviour {
                 break;
         }
         hitPlayer = false;
-	}
+        float ang = Vector3.SignedAngle(player.transform.position - transform.position, Vector3.up, Vector3.forward);
+        if (!ps.past)
+        {
+            if (ang < 45 && ang > -45)
+                sr.sprite = upPast;
+            if (ang >= 45 && ang <= 135)
+                sr.sprite = rightPast;
+            if (ang > 135 || ang < -135)
+                sr.sprite = downPast;
+            if (ang > -135 && ang < -45)
+                sr.sprite = leftPast;
+        } else
+        {
+            if (ang < 45 && ang > -45)
+                sr.sprite = upFuture;
+            if (ang >= 45 && ang <= 135)
+                sr.sprite = rightFuture;
+            if (ang > 135 || ang < -135)
+                sr.sprite = downFuture;
+            if (ang > -135 && ang < -45)
+                sr.sprite = leftFuture;
+        }
+    }
 
     IEnumerator SlashTimer()
     {
