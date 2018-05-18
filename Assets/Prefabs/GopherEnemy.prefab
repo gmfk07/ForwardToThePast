@@ -57,9 +57,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.32, y: 0.31}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -81,6 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   dropMoney: 1
+  dropMoneyChance: 1
   dropHealthChance: 0.15
   coinMaxSpeed: 200
   coinMinSpeed: 100
@@ -88,6 +89,7 @@ MonoBehaviour:
   coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
   healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
     type: 2}
+  knockbackForce: 350
 --- !u!114 &114756854230092322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +111,7 @@ MonoBehaviour:
   projectileObject: {fileID: 1100680057653266, guid: f16141b1d0779ce418ed1370a4247304,
     type: 2}
   smartTargeting: 0
+  customAngle: 0
 --- !u!212 &212550597560005308
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,8 +147,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.6901961, g: 0.031372562, b: 0.31122315, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0c02823d447378648acb20c5e689b09f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
