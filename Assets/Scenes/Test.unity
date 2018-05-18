@@ -2844,16 +2844,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4049012158959364, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_LocalPosition.x
       value: 67.43
@@ -2889,36 +2879,6 @@ Prefab:
     - target: {fileID: 1263549024702958, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
       propertyPath: m_Name
       value: Timestone (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: y
-      value: -35.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.name
-      value: Hero
-      objectReference: {fileID: 0}
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: firstDialogue.sentences.Array.data[0]
-      value: Do you see that prophecy too? Does it mean what I think it means?
-      objectReference: {fileID: 0}
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.name
-      value: Hero
-      objectReference: {fileID: 0}
-    - target: {fileID: 114356790010848206, guid: 4b9410bd3c0f0384abdd7268894a1069,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: Well...we will do what we must. I'm sorry.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b9410bd3c0f0384abdd7268894a1069, type: 2}
@@ -18132,11 +18092,6 @@ Prefab:
       propertyPath: m_Name
       value: Sign (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 114861319419072356, guid: b4cc13e4a1d6e834f94dd98856ca7924,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: Above this point lies only suffering. Stay away or risk destruction.
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4cc13e4a1d6e834f94dd98856ca7924, type: 2}
   m_IsPrefabParent: 0
@@ -20276,6 +20231,12 @@ Prefab:
       propertyPath: type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212545798192391334, guid: ff45595784c94bb42a2e8b82f9b2c48c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 37d0b685966d84141b6c1fc4af02026c,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff45595784c94bb42a2e8b82f9b2c48c, type: 2}
   m_IsPrefabParent: 0
@@ -29035,6 +28996,12 @@ Prefab:
       propertyPath: type
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212545798192391334, guid: ff45595784c94bb42a2e8b82f9b2c48c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 37d0b685966d84141b6c1fc4af02026c,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff45595784c94bb42a2e8b82f9b2c48c, type: 2}
   m_IsPrefabParent: 0

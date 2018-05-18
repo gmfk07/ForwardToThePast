@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1160164129227122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.08, y: 10.55, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 70.5, y: 9.1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,16 +77,16 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14, y: 0.14}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
 --- !u!114 &114861319419072356
 MonoBehaviour:
@@ -99,10 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cda8b17c7f7098429059965fe52b9e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstDialogue:
+    name: 
+    sentences: []
   dialogue:
     name: Sign
     sentences:
-    - Beware all who travel beyond this point. Monsters claim this forest.
+    - Above this point lies only suffering. Stay away or risk destruction.
   interactRadius: 0.95
 --- !u!212 &212668516696558982
 SpriteRenderer:
@@ -139,8 +142,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.745283, g: 0.31015694, b: 0.13710396, a: 1}
+  m_Sprite: {fileID: 21300000, guid: dfeeaa95449a5184f9c87081df2597a4, type: 3}
+  m_Color: {r: 0.8490566, g: 0.82324386, b: 0.81301177, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
