@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114392129249411444}
   - component: {fileID: 114197181040597156}
   - component: {fileID: 95888865388620542}
+  - component: {fileID: 111786639239407106}
   m_Layer: 8
   m_Name: Speedy Gonzales
   m_TagString: Enemy
@@ -99,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 1329948165692964}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2cdf6b35ef45da41914e0930a7bdce8, type: 2}
+  m_Controller: {fileID: 9100000, guid: b379a4ae2c1bdfd4ba1471856cfd541c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -108,6 +109,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111786639239407106
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329948165692964}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 49d9315c6086b1f419c18e7617a04918, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114197181040597156
 MonoBehaviour:
   m_ObjectHideFlags: 1
