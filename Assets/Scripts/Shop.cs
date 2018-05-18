@@ -19,7 +19,7 @@ public class Shop : NPC {
             player.GetComponent<PlayerStats>().money -= cost;
             var created = Instantiate(dispenseObject);
             created.transform.position = transform.position;
-            Vector3 dir = player.transform.position - transform.position;
+            Vector3 dir = transform.position - player.transform.position;
             created.GetComponent<Rigidbody2D>().AddForce(dir.normalized * dispenseSpeed);
 
             if (oneOff)

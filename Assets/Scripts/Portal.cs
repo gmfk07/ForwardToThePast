@@ -14,12 +14,32 @@ public class Portal : NPC {
     }
 
 
-    public override void Talk()
+    /*public override void Talk()
     {
+        DialogueManager dm = DialogueManager.instance;
+        if (!firstDialogue.isEmpty() && timesInteracted == 0)
+            dm.StartDialogue(firstDialogue);
+        else
+            dm.StartDialogue(dialogue);
+        ++timesInteracted;
+        StartCoroutine(Waiter(dm));
         player.transform.position = new Vector3(x, y, 0);
         if (time)
         {
            player.GetComponent<PlayerStats>().past = !player.GetComponent<PlayerStats>().past;
         }
+    }*/
+    public void port()
+    {
+        player.transform.position = new Vector3(x, y, 0);
+        if (time)
+        {
+            player.GetComponent<PlayerStats>().past = !player.GetComponent<PlayerStats>().past;
+        }
+
+    }
+    IEnumerator Waiter(DialogueManager dm)
+    {
+        yield return new WaitWhile(() => dm.IsInDialogue());
     }
 }

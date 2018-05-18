@@ -15,7 +15,7 @@ public class EnemySlash : MonoBehaviour {
         if (collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<PlayerStats>().HurtPlayer();
-            FindObjectOfType<FinalBoss>().SucessfullyHitPlayer();
+            gameObject.GetComponentInParent<FinalBoss>().SucessfullyHitPlayer();
         }
     }
 }
