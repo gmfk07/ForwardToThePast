@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61263633771596098}
   - component: {fileID: 114552330793949898}
   - component: {fileID: 114317666082595916}
+  - component: {fileID: 95809961696197054}
   m_Layer: 8
   m_Name: SmartGopherEnemy
   m_TagString: Enemy
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1136218257454134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.71, y: -3.29, z: 0}
+  m_LocalPosition: {x: 3.1603518, y: 33.95778, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,9 +58,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.18, y: 0.18}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -68,6 +69,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.14}
   m_EdgeRadius: 0
+--- !u!95 &95809961696197054
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1136218257454134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da19282e98f979c4d80b116dd0c85b88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114317666082595916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   dropMoney: 2
+  dropMoneyChance: 1
   dropHealthChance: 0.15
   coinMaxSpeed: 200
   coinMinSpeed: 100
@@ -88,6 +107,7 @@ MonoBehaviour:
   coinObject: {fileID: 1021162641244668, guid: 22164ad1514154c4b8accbc2b995dabd, type: 2}
   healthObject: {fileID: 1626201333117398, guid: 973e46adff23a144b8df406686b1b20f,
     type: 2}
+  knockbackForce: 350
 --- !u!114 &114552330793949898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +129,7 @@ MonoBehaviour:
   projectileObject: {fileID: 1100680057653266, guid: f16141b1d0779ce418ed1370a4247304,
     type: 2}
   smartTargeting: 1
+  customAngle: 0
 --- !u!212 &212413707288241636
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -122,7 +143,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -144,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300002, guid: 4ec4a7a9d56ad344d90fb3a4e5b086e3, type: 3}
   m_Color: {r: 0.6901961, g: 0.031372562, b: 0.31122315, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -19,12 +19,14 @@ public class GopherEnemy : MonoBehaviour {
     private GameObject player;
     private bool shooting = false;
     public float customAngle;
+    Animator animator;
 
     private void Start()
     {
         player = GameObject.Find("Player");
         StartCoroutine(Pop());
         render = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Use this for initialization
@@ -71,7 +73,9 @@ public class GopherEnemy : MonoBehaviour {
                     created.GetComponent<Rigidbody2D>().AddForce(dir.normalized * projectileSpeed);
                 }
                 created.GetComponent<Projectile>().timer = projectileTimer;
+                animator.SetBool("Popped", true);
                 yield return new WaitForSeconds(hideTimer);
+                animator.SetBool("Popped", false);
                 hidden = true;
             }
         }
