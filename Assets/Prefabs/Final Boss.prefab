@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1561331216770504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.24, y: -43.5, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 0.02, y: -44.95, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,18 +76,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.015, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14, y: 0.14}
+  m_Size: {x: 0.34, y: 0.57}
   m_EdgeRadius: 0
 --- !u!114 &114612147300529314
 MonoBehaviour:
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a4c331cdeaeb447876bf9d98eb6d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleStartRange: 10
+  battleStartRange: 7
   slashTime: 1
   chaseSpeed: 400
   runSpeed: 1200
@@ -130,6 +130,18 @@ MonoBehaviour:
   maxHealth: 0
   slashObject: {fileID: 1735448461754842, guid: cd43d8fa1fbf56b4f9a39d1a4e95010a,
     type: 2}
+  leftPast: {fileID: 21300000, guid: 690a4a38a69ba9d48bb9784b3a4e62f9, type: 3}
+  downPast: {fileID: 21300000, guid: 155d8e4a65e8b1a4983d0fec3f58c80d, type: 3}
+  rightPast: {fileID: 21300000, guid: da8ba625a99122241a6955f02e7d3a9a, type: 3}
+  upPast: {fileID: 21300000, guid: 4bffdd2d3a20d484da83c68a9752ec65, type: 3}
+  leftFuture: {fileID: 21300000, guid: 8ed8ee5804c46af48a108e9b6f446e78, type: 3}
+  downFuture: {fileID: 21300000, guid: fd96e7973d6c6f941b309c9a30b1f035, type: 3}
+  rightFuture: {fileID: 21300000, guid: a6997b1508f385342a181a3f2d99f1df, type: 3}
+  upFuture: {fileID: 21300000, guid: 8f3c83e05571fed4ba20b5bb7b18be38, type: 3}
+  deathDialogue:
+    name: Scrungus
+    sentences:
+    - Haha owwww
 --- !u!212 &212988017029642220
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -143,6 +155,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -164,7 +177,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 155d8e4a65e8b1a4983d0fec3f58c80d, type: 3}
   m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_FlipX: 0
   m_FlipY: 0

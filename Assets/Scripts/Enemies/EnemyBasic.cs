@@ -14,6 +14,8 @@ public class EnemyBasic : MonoBehaviour {
     public GameObject coinObject;
     public GameObject healthObject;
     public float knockbackForce = 350f;
+    public delegate void OnDeath();
+    public event OnDeath onDeath;
     Rigidbody2D enemyRigidBody;
 
     private void Start()
@@ -26,6 +28,7 @@ public class EnemyBasic : MonoBehaviour {
         health--;
         if (health == 0)
         {
+            if (onDeath != null) onDeath(); //special events after death
             Drop();
             Destroy(gameObject);
         }
