@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1161198239928324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.45195, y: 14.146073, z: 0}
+  m_LocalPosition: {x: -2.81, y: 65.55, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &61121079293873208
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -123,9 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootRange: 6.5
-  runRange: 3
-  stopRange: 5
-  speed: 400
+  runRange: 4
+  stopRange: 6
+  speed: 14
   shootFreq: 1
   projectileObject: {fileID: 1100680057653266, guid: f16141b1d0779ce418ed1370a4247304,
     type: 2}
