@@ -20,6 +20,7 @@ public class FinalBoss : MonoBehaviour {
     public Sprite rightFuture;
     public Sprite upFuture;
     public Dialogue deathDialogue;
+    public AudioClip finalBossMusic;
 
     SpriteRenderer sr;
     Rigidbody2D rb;
@@ -27,6 +28,7 @@ public class FinalBoss : MonoBehaviour {
     BossState state;
     PlayerStats ps;
     EnemyBasic enemy;
+    GameObject cam;
 
     bool hitPlayer = false;
 
@@ -40,6 +42,7 @@ public class FinalBoss : MonoBehaviour {
         ps = player.GetComponent<PlayerStats>();
         state = BossState.Idle;
         StartCoroutine(SlashTimer());
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
         if (ps.past)
             sr.sprite = downPast;
         else
@@ -67,6 +70,10 @@ public class FinalBoss : MonoBehaviour {
                 {
                     state = BossState.Chase;
                     StartCoroutine(SlashTimer());
+                    var source = cam.GetComponent<AudioSource>();
+                    source.Stop();
+                    source.clip = finalBossMusic;
+                    source.Play();
                 }
                 break;
             case BossState.Chase:
@@ -127,6 +134,12 @@ public class FinalBoss : MonoBehaviour {
         yield return new WaitForSeconds(runTime);
         state = BossState.Chase;
         StartCoroutine(SlashTimer());
+    }
+
+    private void OnDestroy()
+    {
+        var source = cam.GetComponent<AudioSource>();
+        source.Stop();
     }
 }
 
