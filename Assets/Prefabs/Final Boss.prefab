@@ -138,6 +138,10 @@ MonoBehaviour:
   downFuture: {fileID: 21300000, guid: fd96e7973d6c6f941b309c9a30b1f035, type: 3}
   rightFuture: {fileID: 21300000, guid: a6997b1508f385342a181a3f2d99f1df, type: 3}
   upFuture: {fileID: 21300000, guid: 8f3c83e05571fed4ba20b5bb7b18be38, type: 3}
+  deathDialogue:
+    name: Scrungus
+    sentences:
+    - Haha owwww
 --- !u!212 &212988017029642220
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwordSlash : MonoBehaviour {
     private List<int> hitList;
+    public AudioClip hitSound;
 
     void Start () {
         Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
@@ -21,6 +22,9 @@ public class SwordSlash : MonoBehaviour {
         {
             EnemyBasic enemy = collider.gameObject.GetComponent<EnemyBasic>();
             enemy.TakeDamage();
+            var source = GetComponentInParent<AudioSource>();
+            source.clip = hitSound;
+            source.Play();
             enemy.KnockbackEnemy(PlayerManager.instance.Player.transform.position); //only works if has rigidbody
 
             hitList.Add(colliderId);

@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour {
     public int money = 0;
     public int health = 0;
     public bool maxHealth = false;
+    public AudioClip clip;
     public Artifact artifact;
 
     private void Start()
@@ -17,6 +18,9 @@ public class Pickup : MonoBehaviour {
     {
         if (collider.gameObject.tag == "Player")
         {
+            var source = collider.gameObject.GetComponent<AudioSource>();
+            source.clip = clip;
+            source.Play();
             if (artifact != null)
             {
                 artifact.Activate();

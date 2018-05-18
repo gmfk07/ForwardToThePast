@@ -92,6 +92,7 @@ MonoBehaviour:
   money: 1
   health: 0
   maxHealth: 0
+  clip: {fileID: 8300000, guid: d0f580479a3566544ad64f835c46482b, type: 3}
   artifact: {fileID: 0}
 --- !u!212 &212077710963112976
 SpriteRenderer:
@@ -106,6 +107,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
