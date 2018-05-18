@@ -11,8 +11,8 @@ public class GopherEnemy : MonoBehaviour {
     public float shootRange = 6.5f;
     public float projectileSpeed = 4f;
     public float projectileTimer = 2f;
-    public Sprite popSprite;
-    public Sprite hideSprite;
+    public Color hiddenColor = Color.gray;
+    public Color popColor = Color.magenta;
     private bool hidden = true;
     public GameObject projectileObject;
     public bool smartTargeting = false;
@@ -40,12 +40,12 @@ public class GopherEnemy : MonoBehaviour {
 
         if (hidden)
         {
-            render.sprite = hideSprite;
+            render.color = hiddenColor;
             gameObject.layer = 0;
         }
         else
         {
-            render.sprite = popSprite;
+            render.color = popColor;
             gameObject.layer = 8;
         }
     }
