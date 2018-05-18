@@ -52,6 +52,7 @@ public class FinalBoss : MonoBehaviour {
     }
 
     public void Death() {
+        DialogueManager.instance.onDialogueEnd += Application.Quit;
         DialogueManager.instance.StartDialogue(deathDialogue);
     }
 

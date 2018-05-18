@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour {
     public Text dialogueText;
     public Animator boxAnimator;
     public float readyDelay = 0.2f;
+    public delegate void OnDialogueEnd();
+    public event OnDialogueEnd onDialogueEnd;
 
     private Queue<string> sentences;
     bool ready;
@@ -63,6 +65,8 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue() {
         //Debug.Log("Ending dialogue");
         boxAnimator.SetBool("InDialogue", false);
+        if (onDialogueEnd != null)
+            onDialogueEnd();
     }
 
     IEnumerator WaitForReadyDelay() {
