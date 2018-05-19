@@ -111,7 +111,7 @@ MonoBehaviour:
   dispenseSpeed: 240
   cost: 3
   text: 'Health: 3 Gold'
-  yOffset: 32
+  yOffset: 82
   oneOff: 0
 --- !u!212 &212996404675945208
 SpriteRenderer:
